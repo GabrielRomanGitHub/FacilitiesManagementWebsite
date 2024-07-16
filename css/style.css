@@ -62,6 +62,19 @@ nav button{
 .title-container p{
     font-size: 35px;
     text-align: center;
+    /* Animation */
+        animation: fade-up 0.5s;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .card-container{
@@ -69,14 +82,17 @@ nav button{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 70px;
+
 }
-.card{
+.card{    
     width: 300px;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    /* Animation */
+    animation: fade-up 0.5s;
 }
 .card img{
     width: 100%;
@@ -94,5 +110,46 @@ nav button{
     color: white;
     background-color: rgba(219,37,11,255);
     border-radius: 10px;
-
+}
+.careers-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: rgba(219,37,11,255);
+}
+.careers-info{
+    padding: 100px 80px;
+}
+.careers-title h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: white;
+}
+.careers-paragraph p, h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: white;
+}
+.benefits-container{
+    display: flex;
+    margin-bottom: 25px;
+}
+.benefits-column{
+    margin-left: 18px;
+    margin-right: 50px;
+}
+.benefits-column li{
+    color: white;
+}
+.careers-info a{
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 16px;
+    color: rgba(219,37,11,255);
+    background-color: white;
+    border-radius: 10px;
+}
+.careers-image{
+    height: 100%;
 }
