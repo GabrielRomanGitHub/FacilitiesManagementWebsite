@@ -111,12 +111,17 @@ nav button{
     background-color: rgba(219,37,11,255);
     border-radius: 10px;
 }
-.careers-container{
+.careers-background{
     display: flex;
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 100px;
     background-color: rgba(219,37,11,255);
+}
+.careers-container{
+    display: flex;
+    justify-content: center;
+    width: 1500px;
 }
 .careers-info{
     padding: 100px 80px;
@@ -152,4 +157,11 @@ nav button{
 }
 .careers-image{
     height: 100%;
+    mask-image: linear-gradient(to right, black 50%, transparent 100%);
+}
+
+@media screen and (max-width: 1400px) {
+    .careers-image{
+        display: none;
+    }
 }
