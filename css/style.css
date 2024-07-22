@@ -59,7 +59,7 @@ nav .nav-contact-us{
 .title-container{
     display: flex;
     justify-content: center;
-    margin: 75px auto 60px auto;
+    margin: 105px auto 90px auto;
     align-items: end;
     width: 600px;
 }
@@ -174,7 +174,7 @@ nav .nav-contact-us{
     display: block;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1400px) {
     .careers-image{
         display: none;
     }
@@ -197,5 +197,23 @@ nav .nav-contact-us{
 @media screen and (max-width: 750px) {
     .links{
         display: none;
+    }
+    .careers-title h1{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .careers-paragraph p, h3{
+        font-size: 15px;
+        margin-bottom: 8px;
+        color: white;
+    }
+    .benefits-column li{
+        font-size: 15px;
+        color: white;
+    }
+    .careers-info a{
+        font-size: 15px;
+        padding: 8px 14px;
+        border-radius: 8px;
     }
 }
