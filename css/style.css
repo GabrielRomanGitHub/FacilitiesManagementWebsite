@@ -17,7 +17,6 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .logo img{
@@ -38,26 +37,41 @@ nav{
 }
 
 .links{
-    width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
-nav button{
-    padding: 10px 15px;
-    cursor: pointer;
+.links > *{
+    width: 175px;
+    padding: 0 50px 0 50px;
+}
+
+nav .nav-contact-us{
+    display: inline-block;
+    width: 115px;
+    padding: 10px 16px;
+    color: white;
+    background-color: rgba(219,37,11,255);
+    border-radius: 10px;
 }
 
 .title-container{
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 75px auto 60px auto;
     align-items: end;
-    height: 180px;
     width: 600px;
-
+}
+@media screen and (max-width: 695px) {
+    .title-container{
+        width: 80%;
+        margin: 55px auto 40px auto;
+    }
+    nav{
+        justify-content: space-around;
+        padding: 0;
+    }
 }
 .title-container p{
     font-size: 35px;
@@ -81,7 +95,6 @@ nav button{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 70px;
 
 }
 .card{    
@@ -155,13 +168,34 @@ nav button{
     background-color: white;
     border-radius: 10px;
 }
-.careers-image{
+.careers-image img{
     height: 100%;
     mask-image: linear-gradient(to right, black 50%, transparent 100%);
+    display: block;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
     .careers-image{
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .links .links-home{
+        display: none;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .links .links-careers{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px) {
+    .links .links-services{
+        display: none;
+    }
+}
+@media screen and (max-width: 750px) {
+    .links{
         display: none;
     }
 }
