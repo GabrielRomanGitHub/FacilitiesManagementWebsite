@@ -40,6 +40,7 @@ nav{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     background-color: white;
     position: fixed;
+    z-index: 1000;
 }
 nav .nav-container{
     display: flex;
@@ -101,17 +102,20 @@ nav .contact-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 .card{    
     width: 300px;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.1);
     margin: 20px;
     /* Animation */
     animation: fade-up 0.5s;
+    transition: transform 0.25s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.05);
 }
 .card img{
     width: 100%;
@@ -187,6 +191,24 @@ nav .contact-container{
     color: rgba(219,37,11,255);
     margin: 90px 0px;
     text-align: center;
+}
+.meet-our-team-container .card-content{
+    text-align: center;
+}
+.meet-our-team-container .card img{
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+.meet-our-team-container .card{
+    transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+.meet-our-team-container .card:hover{
+    background-color: rgba(219,37,11,255);
+}
+.meet-our-team-container .card .card-content{
+    transition: color 0.5s ease-in-out;
+}
+.meet-our-team-container .card:hover .card-content h2, .meet-our-team-container .card:hover .card-content p{
+    color: white;
 }
 
 @media screen and (max-width: 1400px) {
