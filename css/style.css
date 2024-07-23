@@ -17,6 +17,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 150px;
 }
 
 .logo img{
@@ -26,14 +27,24 @@ a{
 body{
     background-color: white;
 }
-
+header{
+    display: flex;
+}
 nav{
     padding: 0 120px;
     display: flex;
+    align-items: top;
+    justify-content: space-around;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: fixed;
+}
+nav .nav-container{
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .links{
@@ -56,23 +67,18 @@ nav .nav-contact-us{
     border-radius: 10px;
 }
 
+nav .contact-container{
+    padding-left: 100px;
+}
+
 .title-container{
     display: flex;
     justify-content: center;
-    margin: 105px auto 90px auto;
+    margin: 185px auto 90px auto;
     align-items: end;
     width: 600px;
 }
-@media screen and (max-width: 695px) {
-    .title-container{
-        width: 80%;
-        margin: 55px auto 40px auto;
-    }
-    nav{
-        justify-content: space-around;
-        padding: 0;
-    }
-}
+
 .title-container p{
     font-size: 35px;
     text-align: center;
@@ -173,6 +179,15 @@ nav .nav-contact-us{
     mask-image: linear-gradient(to right, black 50%, transparent 100%);
     display: block;
 }
+.meet-our-team-container{
+    justify-content: center;
+}
+.meet-our-team-title h1{
+    font-size: 40px;
+    color: rgba(219,37,11,255);
+    margin: 90px 0px;
+    text-align: center;
+}
 
 @media screen and (max-width: 1400px) {
     .careers-image{
@@ -215,5 +230,14 @@ nav .nav-contact-us{
         font-size: 15px;
         padding: 8px 14px;
         border-radius: 8px;
+    }
+}
+@media screen and (max-width: 695px) {
+    .title-container{
+        width: 80%;
+        margin: 135px auto 40px auto;
+    }
+    nav .contact-container{
+        padding-left: 0;
     }
 }
