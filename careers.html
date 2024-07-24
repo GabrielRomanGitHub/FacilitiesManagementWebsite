@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Facilities Management | Apply Application</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="external.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Core Logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="links">
+                    <a href="index.html" class="links-home">Home</a>
+                    <a href="#" class="links-about-us">About Us</a>
+                    <a href="#" class="links-services">Services</a>
+                    <a href="careers.html" class="links-careers">Careers</a>
+                </div>
+                <div class="contact-container">
+                    <a href="#" class="nav-contact-us">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="application-title">Join Us</h1>
+        <div class="application-box">
+            <img src="images/happy-staff-image.jpg" alt="">
+            <form id="mainForm" action="">
+                <div class="form-control">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" required="required" placeholder="First Name">
+                    <i class="icon"></i>
+                </div>
+                <div class="form-control">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" required="required" placeholder="Last Name">
+                    <i class="icon"></i>
+                </div>
+                <div class="form-control">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required="required" placeholder="Phone Number">
+                    <i class="icon"></i>
+                </div>
+                <div class="form-control">
+                    <label for="county">County</label>
+                    <select id="county">
+                        <option value="dublin">Dublin</option>
+                        <option value="cork">Cork</option>
+                        <option value="limerick">Limerick</option>
+                    </select>
+                    <i class="icon"></i>
+                </div>
+                <div class="form-control">
+                    <label for="sector">Sector</label>
+                    <select id="sector">
+                        <option value="cleaning">Cleaning</option>
+                        <option value="security">Security</option>
+                        <option value="portering">Portering</option>
+                        <option value="clerical">Clerical</option>
+                        <option value="any">Any</option>
+                    </select>
+                    <i class="icon"></i>
+                </div>
+                <div class="form-control">
+                    <label for="fileUpload">Upload your CV</label>
+                    <input type="file" id="fileUpload" accept=".pdf, .doc, .docx">
+                </div>
+                <div class="form-control">
+                    <label for="cover-letter">Cover Letter (Optional)</label>
+                    <textarea id="cover-letter" placeholder="Cover Letter"></textarea>
+                </div>
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1>Thank you for applying!</h1>
+                <p>We'll get back to you in the next 5 working days.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

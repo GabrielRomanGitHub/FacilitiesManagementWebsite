@@ -154,7 +154,7 @@ nav .contact-container{
     margin-bottom: 15px;
     color: white;
 }
-.careers-paragraph p, h3{
+.careers-paragraph p, .careers-paragraph h3{
     font-size: 25px;
     margin-bottom: 15px;
     color: white;
@@ -210,7 +210,65 @@ nav .contact-container{
 .meet-our-team-container .card:hover .card-content h2, .meet-our-team-container .card:hover .card-content p{
     color: white;
 }
-
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.application-title{
+    margin-top: 150px;
+}
+.application-box{
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.application-box img{
+    width: 50%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+.application-box form{
+    width: 50%;
+}
+.form-control{
+    margin-bottom: 15px;
+}
+.form-control label{
+    display: block;
+    margin-bottom: 6px;
+}
+.form-control input, .form-control textarea, .form-control select{
+    width: 100%;
+    padding: 10px;
+    padding-right: 42px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+}
+.form-control textarea{
+    resize: none;
+    height: 110px;
+}
+.application-box button{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: rgba(219,37,11,255);
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.application-box button:hover{
+    transform: scale(1.05);
+}
+.modal{
+    display: none;
+}
 @media screen and (max-width: 1400px) {
     .careers-image{
         display: none;
@@ -230,6 +288,12 @@ nav .contact-container{
     .links .links-services{
         display: none;
     }
+    .application-box img{
+        display: none;
+    }
+    .application-box form{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 750px) {
     .links{
@@ -239,7 +303,7 @@ nav .contact-container{
         font-size: 25px;
         margin-bottom: 10px;
     }
-    .careers-paragraph p, h3{
+    .careers-paragraph p, .careers-paragraph h3{
         font-size: 15px;
         margin-bottom: 8px;
         color: white;
