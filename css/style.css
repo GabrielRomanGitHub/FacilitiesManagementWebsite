@@ -234,22 +234,23 @@ nav .contact-container{
 .application-box form{
     width: 50%;
 }
-.form-control{
-    margin-bottom: 15px;
-}
-.form-control label{
+.application-form label{
     display: block;
     margin-bottom: 6px;
 }
-.form-control input, .form-control textarea, .form-control select{
+.application-form input, .application-form textarea, .application-form select{
     width: 100%;
     padding: 10px;
     padding-right: 42px;
+    margin-bottom: 15px;
     border: 2px solid #ddd;
     border-radius: 12px;
     outline: none;
 }
-.form-control textarea{
+.application-form .file-upload{
+    cursor: pointer;
+}
+.application-form textarea{
     resize: none;
     height: 110px;
 }
@@ -264,9 +265,10 @@ nav .contact-container{
     transition: all 0.3s ease;
 }
 .application-box button:hover{
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 .modal{
+    margin-top: 150px;
     display: none;
 }
 @media screen and (max-width: 1400px) {
