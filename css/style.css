@@ -280,8 +280,13 @@ nav .contact-container{
     margin-left: 10px;
     color: rgba(219,37,11,255);
     position: relative;
-    transform: translateY(-10px);
-    display: none;
+    transform: translateY(-12px);
+    opacity: 00%;
+    margin-bottom: -10px;
+}
+.phone-num-missing{
+    position: absolute;
+    transform: translateY(-18px);
 }
 @media screen and (max-width: 1400px) {
     .careers-image{

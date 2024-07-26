@@ -33,11 +33,12 @@
         <div id="applicationBox" class="application-box">
             <img src="images/happy-staff-image.jpg" alt="">
             <form id="applicationForm" class="application-form">
+                <!-- autocomplete = 'new-password' prevents the web browser from trying to fill in or offer suggestions. -->
                 <label for="fName">First Name</label>
-                <input type="text" id="fName" placeholder="First Name" autocomplete="off">
+                <input type="text" id="fName" placeholder="First Name" autocomplete="new-password">
                 <p id="fNameMissing" class="f-name-missing info-missing">Please input your first name.</p>
                 <label for="lName">Last Name</label>
-                <input type="text" id="lName" placeholder="Last Name" autocomplete="off">
+                <input type="text" id="lName" placeholder="Last Name" autocomplete="new-password">
                 <p id="lNameMissing" class="l-name-missing info-missing">Please input your last name.</p>
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Email" autocomplete="new-password">

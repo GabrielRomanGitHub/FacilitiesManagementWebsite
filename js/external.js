@@ -16,27 +16,27 @@ const phoneNumMissing = document.getElementById('phoneNumMissing');
 
 applicationSubmitted();
 fName.addEventListener('input', function() {
-    fNameMissing.style.display = 'none';
+    fNameMissing.style.opacity = '0%';
     fName.style.borderColor = '#ddd';
 });
 lName.addEventListener('input', function() {
-    lNameMissing.style.display = 'none';
+    lNameMissing.style.opacity = '0%';
     lName.style.borderColor = '#ddd';
 })
 email.addEventListener('input', function() {
-    emailMissing.style.display = 'none';
+    emailMissing.style.opacity = '0%';
     email.style.borderColor = '#ddd';
 })
 phone.addEventListener('input', function() {
-    phoneMissing.style.display = 'none';
+    phoneMissing.style.opacity = '0%';
     phone.style.borderColor = '#ddd';
 })
 phone.addEventListener('input', function() {
-    phoneNumMissing.style.display = 'none';
+    phoneNumMissing.style.opacity = '0%';
     phone.style.borderColor = '#ddd';
 })
 fileUpload.addEventListener('input', function() {
-    fileUploadMissing.style.display = 'none';
+    fileUploadMissing.style.opacity = '0%';
     fileUpload.style.borderColor = '#ddd';
 })
 // Tries to submit the application when the 'submit' button is clicked.
@@ -45,32 +45,33 @@ applicationForm.addEventListener('submit', (e) => {
     let errorMessages = [];
     if (fName.value === '' || fName.value === null) {
         errorMessages.push('.');
-        fNameMissing.style.display = 'block';
+        fNameMissing.style.opacity = '100%';
         fName.style.borderColor = 'rgba(219,37,11,255)';
     } 
     if (lName.value === '' || lName.value === null){
         errorMessages.push('.')
-        lNameMissing.style.display = 'block';
+        lNameMissing.style.opacity = '100%';
         lName.style.borderColor = 'rgba(219,37,11,255)';
     } 
     if (email.value === '' || email.value === null){
         errorMessages.push('.');
-        emailMissing.style.display = 'block';
+        emailMissing.style.opacity = '100%';
         email.style.borderColor = 'rgba(219,37,11,255)';
     }
     if (phone.value === '' || phone.value === null){
         errorMessages.push('.');
-        phoneMissing.style.display = 'block';
+        phoneMissing.style.opacity = '100%';
         phone.style.borderColor = 'rgba(219,37,11,255)';
     }
-    if (isNaN(parseInt(phone.value, 10)) && phone.value !== '' || phone.value.toString() !== phone.value && phone.value !== '') {
+    let parsedPhone = parseInt(phone.value, 10);
+    if (parsedPhone.toString() !== phone.value && phone.value !=='') {
         errorMessages.push('.');
-        phoneNumMissing.style.display = 'block';
+        phoneNumMissing.style.opacity = '100%';
         phone.style.borderColor = 'rgba(219,37,11,255)';
       }
     if (fileUpload.value === '' || fileUpload.value === null){
         errorMessages.push('.');
-        fileUploadMissing.style.display = 'block';
+        fileUploadMissing.style.opacity = '100%';
         fileUpload.style.borderColor = 'rgba(219,37,11,255)';
     }
     // If there's at least an error, the form will fail to submit.
