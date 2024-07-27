@@ -248,6 +248,17 @@ nav .contact-container{
     border-radius: 12px;
     outline: none;
 }
+.radio-buttons-container{
+    display: flex;
+    margin-bottom: 8px;
+}
+.radio-buttons-container p{
+    width: 120px;
+}
+.radio-buttons-container input[type="radio"] {
+    width: 25px;
+    transform: translateY(3px);
+}
 .application-form .file-upload{
     cursor: pointer;
 }

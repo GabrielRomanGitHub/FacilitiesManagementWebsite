@@ -61,6 +61,14 @@
                     <option value="portering">Portering</option>
                     <option value="clerical">Clerical</option>
                 </select>
+                <label for="availability">Availability</label>
+                <div class="radio-buttons-container">
+                    <input type="radio" name="availability" value="fullTime">
+                    <p>Full Time</p> <br>
+                    <input type="radio" name="availability" value="partTime">
+                    <p>Part Time</p>
+                </div>
+                <p id="availabilityMissing" class="availability-missing info-missing">Please select your availability.</p>
                 <label for="fileUpload">Upload your CV</label>
                 <input type="file" class="file-upload" id="fileUpload" accept=".pdf, .doc, .docx">
                 <p id="fileUploadMissing" class="file-upload-missing info-missing">Please upload your CV (PDF, DOC, DOCX)</p>

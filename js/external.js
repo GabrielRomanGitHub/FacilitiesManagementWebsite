@@ -69,6 +69,16 @@ applicationForm.addEventListener('submit', (e) => {
         phoneNumMissing.style.opacity = '100%';
         phone.style.borderColor = 'rgba(219,37,11,255)';
       }
+    let availabilitySelected = document.querySelector('input[name="availability"]:checked');
+    if (!availabilitySelected) {
+        errorMessages.push('.');
+        availabilityMissing.style.opacity = '100%';
+    }
+    document.querySelectorAll('input[name="availability"]').forEach(function(radio) {
+        radio.addEventListener('input', function() {
+            availabilityMissing.style.opacity = '0%';
+        });
+    });
     if (fileUpload.value === '' || fileUpload.value === null){
         errorMessages.push('.');
         fileUploadMissing.style.opacity = '100%';
