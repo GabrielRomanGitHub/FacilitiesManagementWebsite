@@ -243,11 +243,12 @@ nav .contact-container{
     width: 100%;
     padding: 10px;
     padding-right: 42px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     border: 2px solid #ddd;
     border-radius: 12px;
     outline: none;
 }
+
 .radio-buttons-container{
     display: flex;
     margin-bottom: 8px;
@@ -278,6 +279,17 @@ nav .contact-container{
 }
 .application-box button:hover{
     transform: scale(1.025);
+}
+.checkbox-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkbox-container div{
+    padding-right: 15px;
+}
+.checkbox-container div p{
+    font-size: 14px;
+    color: rgb(110, 110, 110);
 }
 .success-message{
     margin-top: 250px;

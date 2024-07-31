@@ -79,6 +79,16 @@ applicationForm.addEventListener('submit', (e) => {
             availabilityMissing.style.opacity = '0%';
         });
     });
+    let availableDaysSelected = document.querySelector('input[name="availableDays"]:checked');
+    if (!availableDaysSelected) {
+        errorMessages.push('.');
+        availableDaysMissing.style.opacity = '100%';
+    }
+    document.querySelectorAll('input[name="availableDays"]').forEach(function(checkbox) {
+        checkbox.addEventListener('input', function() {
+            availableDaysMissing.style.opacity = '0%';
+        });
+    })
     if (fileUpload.value === '' || fileUpload.value === null){
         errorMessages.push('.');
         fileUploadMissing.style.opacity = '100%';
