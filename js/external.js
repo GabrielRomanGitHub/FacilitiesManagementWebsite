@@ -13,6 +13,32 @@ const emailMissing = document.getElementById('emailMissing');
 const phoneMissing = document.getElementById('phoneMissing');
 const fileUploadMissing = document.getElementById('fileUploadMissing');
 const phoneNumMissing = document.getElementById('phoneNumMissing');
+const closeButton = document.getElementById('closeButton');
+
+cleanersImage.onclick = function() {
+    cleanersModal.style.display = 'block';
+}
+closeCleanersModalButton.onclick = function() {
+    cleanersModal.style.display = "none";
+}
+guardsImage.onclick = function() {
+    securityModal.style.display = 'block';
+}
+closeSecurityModalButton.onclick = function() {
+    securityModal.style.display = "none";
+}
+portersImage.onclick = function() {
+    porterModal.style.display = 'block';
+}
+closePorterModalButton.onclick = function() {
+    porterModal.style.display = "none";
+}
+administrativeImage.onclick = function() {
+    clericalModal.style.display = 'block';
+}
+closeClericalModalButton.onclick = function() {
+    clericalModal.style.display = "none";
+}
 
 applicationSubmitted();
 fName.addEventListener('input', function() {

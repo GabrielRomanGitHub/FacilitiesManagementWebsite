@@ -114,11 +114,47 @@ nav .contact-container{
     animation: fade-up 0.5s;
     transition: transform 0.25s ease-in-out;
 }
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 500; /* Sit on top */
+    padding-top: 400px ;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 400px;
+}
+.close-button {
+    position: relative;
+    transform: translateY(-15px) translateX(25px);
+    color: #ddd;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 .card:hover{
     transform: scale(1.05);
 }
 .card img{
     width: 100%;
+    cursor: pointer;
 }
 .card-content{
     padding: 15px;
@@ -197,6 +233,7 @@ nav .contact-container{
 }
 .meet-our-team-container .card img{
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    cursor: auto;
 }
 .meet-our-team-container .card{
     transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out;
