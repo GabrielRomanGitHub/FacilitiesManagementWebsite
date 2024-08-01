@@ -358,6 +358,8 @@ nav .nav-container{
     justify-content: center;
     margin-top: 250px;
     margin-bottom: -75px;
+    max-width: 100%;
+    height: auto;
 }
 .cup-container {
     position: relative;
@@ -416,6 +418,14 @@ nav .nav-container{
     .application-box form{
         width: 100%;
     }
+    .cup-container{
+        width: 90%;
+        margin-right: 1%;
+        height: auto;
+    }
+    .coin{
+        width: 10.5%;
+        height: auto;
 }
 @media screen and (max-width: 750px) {
     .links{
