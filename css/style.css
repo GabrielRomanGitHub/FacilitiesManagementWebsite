@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* Resetting global style. */
 *{
     margin: 0;
     padding: 0;
@@ -6,27 +7,13 @@
     font-family: "Rubik", sans-serif;
     color: rgb(50, 50, 50);
 }
-
-a{
-    text-decoration: none;
-}
-
-.logo{
-    width: 120px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 150px;
-}
-
-.logo img{
-    width: 100px;
-}
-
 body{
     background-color: white;
 }
+a{
+    text-decoration: none;
+}
+/* Navigation bar. */
 header{
     display: flex;
 }
@@ -47,19 +34,27 @@ nav .nav-container{
     align-items: center;
     justify-content: space-between;
 }
-
+.logo{
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 150px;
+}
+.logo img{
+    width: 100px;
+}
 .links{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .links > *{
     width: 220px;
     padding: 0 50px 0 50px;
 }
-
-nav .nav-contact-us{
+.nav-contact-us{
     display: inline-block;
     width: 115px;
     padding: 10px 16px;
@@ -67,11 +62,10 @@ nav .nav-contact-us{
     background-color: rgba(219,37,11,255);
     border-radius: 10px;
 }
-
-nav .contact-container{
+.contact-container{
     padding-left: 100px;
 }
-
+/* Body of index.html */
 .title-container{
     display: flex;
     justify-content: center;
@@ -79,25 +73,11 @@ nav .contact-container{
     align-items: end;
     width: 600px;
 }
-
 .title-container p{
     font-size: 35px;
     text-align: center;
-    /* Animation */
     animation: fade-up 0.5s;
 }
-
-@keyframes fade-up {
-    0% {
-        opacity: 0;
-        transform: translateY(30px) scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
 .card-container{
     display: flex;
     justify-content: center;
@@ -110,84 +90,8 @@ nav .contact-container{
     overflow: hidden;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.1);
     margin: 20px;
-    /* Animation */
     animation: fade-up 0.5s;
     transition: transform 0.25s ease-in-out;
-}
-.modal{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 500; /* Sit on top */
-    padding-top: 400px ;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-.modal-content {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    width: 400px;
-}
-.cookies-modal-content{
-    flex-direction: column;
-    margin-top: -140px;
-}
-.cookies-button-container p{
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 16px;
-    color: white;
-    background-color: rgba(219,37,11,255);
-    border-radius: 10px;
-    cursor: pointer;
-}
-.cookies-button-container{
-    display: flex;
-    width: 100%;
-    justify-content: space-around
-}
-.cookies-modal-content > *:not(div,img) {
-    margin-top: 15px;
-}
-.coin-modal{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-}
-.coin-modal a{
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 16px;
-    color: white;
-    background-color: rgba(219,37,11,255);
-    border-radius: 10px;
-}
-.cookies-modal{
-    display: block;
-}
-.close-button {
-    position: relative;
-    transform: translateY(-15px) translateX(25px);
-    color: #ddd;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-.card:hover{
-    transform: scale(1.05);
 }
 .card img{
     width: 100%;
@@ -207,6 +111,98 @@ nav .contact-container{
     background-color: rgba(219,37,11,255);
     border-radius: 10px;
 }
+.card:hover{
+    transform: scale(1.05);
+}
+/* Modal styling */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 500;
+    padding-top: 400px ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 400px;
+}
+.cookies-modal{
+    display: block;
+}
+.cookies-modal-content{
+    flex-direction: column;
+    margin-top: -140px;
+}
+.cookies-modal-content > *:not(div,img) {
+    margin-top: 15px;
+}
+.cookies-button-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around
+}
+.cookies-button-container p{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    color: white;
+    background-color: rgba(219,37,11,255);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.close-button {
+    position: relative;
+    transform: translateY(-15px) translateX(25px);
+    color: #ddd;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Meet our team section. */
+.meet-our-team-container{
+    justify-content: center;
+}
+.meet-our-team-title h1{
+    font-size: 40px;
+    color: rgba(219,37,11,255);
+    margin: 90px 0px;
+    text-align: center;
+}
+.meet-our-team-container .card-content{
+    text-align: center;
+}
+.meet-our-team-container .card{
+    transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+.meet-our-team-container .card img{
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    cursor: auto;
+}
+.meet-our-team-container .card .card-content{
+    transition: color 0.5s ease-in-out;
+}
+.meet-our-team-container .card:hover{
+    background-color: rgba(219,37,11,255);
+}
+.meet-our-team-container .card:hover .card-content h2, .meet-our-team-container .card:hover .card-content p{
+    color: white;
+}
+/* Careers section. */
 .careers-background{
     display: flex;
     justify-content: center;
@@ -219,13 +215,26 @@ nav .contact-container{
     justify-content: center;
     width: 1500px;
 }
-.careers-info{
-    padding: 100px 80px;
+.careers-image img{
+    height: 100%;
+    mask-image: linear-gradient(to right, black 50%, transparent 100%);
+    display: block;
 }
 .careers-title h1{
     font-size: 40px;
     margin-bottom: 15px;
     color: white;
+}
+.careers-info{
+    padding: 100px 80px;
+}
+.careers-info a{
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 16px;
+    color: rgba(219,37,11,255);
+    background-color: white;
+    border-radius: 10px;
 }
 .careers-paragraph p, .careers-paragraph h3{
     font-size: 25px;
@@ -243,47 +252,7 @@ nav .contact-container{
 .benefits-column li{
     color: white;
 }
-.careers-info a{
-    font-size: 20px;
-    display: inline-block;
-    padding: 10px 16px;
-    color: rgba(219,37,11,255);
-    background-color: white;
-    border-radius: 10px;
-}
-.careers-image img{
-    height: 100%;
-    mask-image: linear-gradient(to right, black 50%, transparent 100%);
-    display: block;
-}
-.meet-our-team-container{
-    justify-content: center;
-}
-.meet-our-team-title h1{
-    font-size: 40px;
-    color: rgba(219,37,11,255);
-    margin: 90px 0px;
-    text-align: center;
-}
-.meet-our-team-container .card-content{
-    text-align: center;
-}
-.meet-our-team-container .card img{
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    cursor: auto;
-}
-.meet-our-team-container .card{
-    transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out;
-}
-.meet-our-team-container .card:hover{
-    background-color: rgba(219,37,11,255);
-}
-.meet-our-team-container .card .card-content{
-    transition: color 0.5s ease-in-out;
-}
-.meet-our-team-container .card:hover .card-content h2, .meet-our-team-container .card:hover .card-content p{
-    color: white;
-}
+/* Application section. */
 .container{
     display: flex;
     flex-direction: column;
@@ -322,7 +291,6 @@ nav .contact-container{
     border-radius: 12px;
     outline: none;
 }
-
 .radio-buttons-container{
     display: flex;
     margin-bottom: 8px;
@@ -333,6 +301,17 @@ nav .contact-container{
 .radio-buttons-container input[type="radio"] {
     width: 25px;
     transform: translateY(3px);
+}
+.checkbox-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkbox-container div{
+    padding-right: 15px;
+}
+.checkbox-container div p{
+    font-size: 14px;
+    color: rgb(110, 110, 110);
 }
 .application-form .file-upload{
     cursor: pointer;
@@ -354,24 +333,6 @@ nav .contact-container{
 .application-box button:hover{
     transform: scale(1.025);
 }
-.checkbox-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-.checkbox-container div{
-    padding-right: 15px;
-}
-.checkbox-container div p{
-    font-size: 14px;
-    color: rgb(110, 110, 110);
-}
-.success-message{
-    margin-top: 250px;
-    display: none;
-    /* Animation */
-    animation: fade-up 0.5s;
-    transition: transform 0.25s ease-in-out;
-}
 .info-missing{
     font-size: 13px;
     margin-left: 10px;
@@ -385,11 +346,21 @@ nav .contact-container{
     position: absolute;
     transform: translateY(-18px);
 }
+.success-message{
+    margin-top: 250px;
+    display: none;
+    animation: fade-up 0.5s;
+    transition: transform 0.25s ease-in-out;
+}
+/* Coin game section. */
 .container-game {
     display: flex;
     justify-content: center;
     margin-top: 250px;
     margin-bottom: -75px;
+}
+.cup-container {
+    position: relative;
 }
 .cup {
     margin: 0 20px;
@@ -397,17 +368,27 @@ nav .contact-container{
     transition: transform 0.5s ease-in-out;
     z-index: 500;
 }
-.cup.reveal {
-    transform: translateY(-200px);
-}
 .coin {
     display: none;
     position: absolute;
     transform: translateY(-150px) translateX(90px);
     width: 100px;
 }
-.cup-container {
-    position: relative;
+.cup.reveal {
+    transform: translateY(-200px);
+}
+.coin-modal{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.coin-modal a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    color: white;
+    background-color: rgba(219,37,11,255);
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -466,5 +447,15 @@ nav .contact-container{
     }
     nav .contact-container{
         padding-left: 0;
+    }
+}
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }

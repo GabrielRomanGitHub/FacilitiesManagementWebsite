@@ -17,6 +17,8 @@ const closeButton = document.getElementById('closeButton');
 
 
 applicationSubmitted();
+
+// If the user starts writing something in the required areas, the error will disappear.
 fName.addEventListener('input', function() {
     fNameMissing.style.opacity = '0%';
     fName.style.borderColor = '#ddd';
@@ -65,6 +67,7 @@ applicationForm.addEventListener('submit', (e) => {
         phoneMissing.style.opacity = '100%';
         phone.style.borderColor = 'rgba(219,37,11,255)';
     }
+    // Parses the phone number to a base 10 number. If the result is converted to a string and is not equal to the input of the user and is not empty, it will push an error.
     let parsedPhone = parseInt(phone.value, 10);
     if (parsedPhone.toString() !== phone.value && phone.value !=='') {
         errorMessages.push('.');
@@ -76,6 +79,7 @@ applicationForm.addEventListener('submit', (e) => {
         errorMessages.push('.');
         availabilityMissing.style.opacity = '100%';
     }
+    // If there is an input in one of the radio buttons, it will get rid of the error message displayed to the user.
     document.querySelectorAll('input[name="availability"]').forEach(function(radio) {
         radio.addEventListener('input', function() {
             availabilityMissing.style.opacity = '0%';

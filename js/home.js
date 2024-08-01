@@ -1,6 +1,14 @@
+// Shows cookies if the user has not already clicked in one of the buttons in this session.
 if (sessionStorage.getItem('cookies') === 'true') {
     cookiesModal.style.display = "none";
 }
+function acceptCookies() {
+    cookiesModal.style.display = "none";
+    sessionStorage.setItem('cookies', 'true');
+}
+cookiesButton1.onclick = acceptCookies;
+cookiesButton2.onclick = acceptCookies;
+// Shows and hides a modal when images in the index.html are clicked.
 cleanersImage.onclick = function() {
     cleanersModal.style.display = 'block';
 }
@@ -25,9 +33,3 @@ administrativeImage.onclick = function() {
 closeClericalModalButton.onclick = function() {
     clericalModal.style.display = "none";
 }
-function acceptCookies() {
-    cookiesModal.style.display = "none";
-    sessionStorage.setItem('cookies', 'true');
-}
-cookiesButton1.onclick = acceptCookies;
-cookiesButton2.onclick = acceptCookies;
