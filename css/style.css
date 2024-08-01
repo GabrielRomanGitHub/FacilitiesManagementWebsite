@@ -55,7 +55,7 @@ nav .nav-container{
 }
 
 .links > *{
-    width: 200px;
+    width: 220px;
     padding: 0 50px 0 50px;
 }
 
@@ -135,6 +135,43 @@ nav .contact-container{
     margin: auto;
     padding: 20px;
     width: 400px;
+}
+.cookies-modal-content{
+    flex-direction: column;
+    margin-top: -140px;
+}
+.cookies-button-container p{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    color: white;
+    background-color: rgba(219,37,11,255);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cookies-button-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around
+}
+.cookies-modal-content > *:not(div,img) {
+    margin-top: 15px;
+}
+.coin-modal{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.coin-modal a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    color: white;
+    background-color: rgba(219,37,11,255);
+    border-radius: 10px;
+}
+.cookies-modal{
+    display: block;
 }
 .close-button {
     position: relative;
@@ -358,6 +395,7 @@ nav .contact-container{
     margin: 0 20px;
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
+    z-index: 500;
 }
 .cup.reveal {
     transform: translateY(-200px);
@@ -365,10 +403,8 @@ nav .contact-container{
 .coin {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
+    transform: translateY(-150px) translateX(90px);
+    width: 100px;
 }
 .cup-container {
     position: relative;
