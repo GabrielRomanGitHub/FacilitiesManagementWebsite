@@ -55,7 +55,7 @@ nav .nav-container{
 }
 
 .links > *{
-    width: 175px;
+    width: 200px;
     padding: 0 50px 0 50px;
 }
 
@@ -348,6 +348,32 @@ nav .contact-container{
     position: absolute;
     transform: translateY(-18px);
 }
+.container-game {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    margin-bottom: -75px;
+}
+.cup {
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.cup.reveal {
+    transform: translateY(-200px);
+}
+.coin {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+}
+.cup-container {
+    position: relative;
+}
+
 @media screen and (max-width: 1400px) {
     .careers-image{
         display: none;
@@ -364,7 +390,7 @@ nav .contact-container{
     }
 }
 @media screen and (max-width: 900px) {
-    .links .links-services{
+    .links .links-visit{
         display: none;
     }
     .application-box img{
