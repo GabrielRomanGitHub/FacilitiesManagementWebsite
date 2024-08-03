@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Neucha&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* Resetting global style. */
 *{
     margin: 0;
@@ -20,7 +21,6 @@ header{
 nav{
     padding: 0 120px;
     display: flex;
-    align-items: top;
     justify-content: space-around;
     height: 80px;
     width: 100%;
@@ -142,6 +142,11 @@ nav .nav-container{
 .cookies-modal-content{
     flex-direction: column;
     margin-top: -140px;
+}
+.cookies-modal-content h3,
+.cookies-modal-content p{
+    font-family: "Neucha";
+    font-size: 20px;
 }
 .cookies-modal-content > *:not(div,img) {
     margin-top: 15px;
@@ -384,6 +389,10 @@ nav .nav-container{
     flex-direction: column;
     width: 500px;
 }
+.coin-modal h3,
+.coin-modal a{
+    font-family: "Lexend";
+}
 .coin-modal a{
     display: inline-block;
     margin-top: 20px;
@@ -426,6 +435,7 @@ nav .nav-container{
     .coin{
         width: 10.5%;
         height: auto;
+    }
 }
 @media screen and (max-width: 750px) {
     .links{
